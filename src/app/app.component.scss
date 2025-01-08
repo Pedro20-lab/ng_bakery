@@ -1,22 +1,63 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
+// .example-spacer {
+//     flex: 1 1 auto;
+// }
 
-.example-card {
-    max-width: 350px;
-    margin: 1em auto;
-}
+// .example-card {
+//     max-width: 350px;
+//     margin: 1em auto;
+// }
 
-.example-header-image {
-    background-image: url('https://media.istockphoto.com/id/1864127668/photo/homemade-natural-breads-different-kinds-of-fresh-bread-as-background-top-view-with-copy-space.jpg?s=612x612&w=is&k=20&c=lSbQJiym31qTvQStM7IsjnVVoVLKdpOOy09qBdjG85I=');
+// .example-header-image {
+//     background-image: url('https://media.istockphoto.com/id/1864127668/photo/homemade-natural-breads-different-kinds-of-fresh-bread-as-background-top-view-with-copy-space.jpg?s=612x612&w=is&k=20&c=lSbQJiym31qTvQStM7IsjnVVoVLKdpOOy09qBdjG85I=');
+//     background-size: cover;
+//     width: 60px;
+//     height: 60px;
+// }
+
+// .title {
+//     font-size: 30px;
+//     font-weight: 500;
+//     text-align: center;
+//     border-bottom: solid 1px black;
+// }
+
+//iamgen fondo https://st2.depositphotos.com/5454582/9446/v/450/depositphotos_94469936-stock-illustration-seamless-vector-pattern-with-hand.jpg
+//iamgen fondo https://st2.depositphotos.com/4966263/7580/v/450/depositphotos_75802887-stock-illustration-hand-drawn-bakery-pattern.jpg
+//iamgen fondo https://img.freepik.com/foto-gratis/espacio-copia-pan-horneado-casero_23-2148719049.jpg
+
+.body-content{
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://img.freepik.com/foto-gratis/espacio-copia-pan-horneado-casero_23-2148719049.jpg');
     background-size: cover;
-    width: 60px;
-    height: 60px;
+    display: flex;
+    justify-items: center;
+}
+.content{
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 2.5em;
+    margin: auto 15%;
+    place-content: center;
+
 }
 
-.title {
-    font-size: 30px;
-    font-weight: 500;
+.item-content{
+    background-color: transparent;
+    //opacity: 0.8;
+    display: flex;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
     text-align: center;
-    border-bottom: solid 1px black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    color: back;
+    font-weight: bold;
+    border: 1px solid gray; 
+    border-radius: 5px;
+    text-transform: uppercase;
+
 }
