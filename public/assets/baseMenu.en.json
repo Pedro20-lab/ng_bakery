@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "name": "Breakfasts",
+        "icon": "egg_alt",
+        "productos": [
+            {
+                "id": 1,
+                "nombre": "Huevos",
+                "precio": 10,
+                "descripcion": "melo caramela"
+            },
+            {
+                "id": 2,
+                "nombre": "Panqueques",
+                "precio": 15,
+                "descripcion": "melo caramela"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Lunches",
+        "icon": "restaurant",
+        "productos": [
+            {
+                "id": 3,
+                "nombre": "Arroz con pollo",
+                "precio": 20,
+                "descripcion": "melo caramela"
+            },
+            {
+                "id": 4,
+                "nombre": "Ensalada",
+                "precio": 12,
+                "descripcion": "melo caramela"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "bakery",
+        "icon": "bakery_dining",
+        "productos": [
+            {
+                "id": 5,
+                "nombre": "pan de bono",
+                "precio": 20,
+                "descripcion": "melo caramela"
+            },
+            {
+                "id": 6,
+                "nombre": "Palito de queso",
+                "precio": 12,
+                "descripcion": "melo caramela"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Drinks",
+        "icon": "water_loss",
+        "productos": [
+            {
+                "id": 7,
+                "nombre": "coca cola",
+                "precio": 20,
+                "descripcion": "melo caramela"
+            },
+            {
+                "id": 8,
+                "nombre": "jugo natural de naraja",
+                "precio": 12,
+                "descripcion": "melo caramela"
+            }
+        ]
+    }
+]

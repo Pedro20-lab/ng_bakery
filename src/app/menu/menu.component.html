@@ -1,0 +1,12 @@
+<div class="body-content">
+
+    <div class="wrap-toggle" #wtf>
+        <input type="checkbox" id="toggle" class="change-idioma" #toggle (change)="changeIdioma()">
+        <label for="toggle" class="switch"></label>
+    </div>
+    <div class="content">
+        <div *ngFor="let menu of menus" class="item-content" (click)="navigateToProducts(menu.name)">
+            <span class="material-symbols-outlined">{{ menu.icon }}</span> {{ menu.name }}
+        </div>
+    </div>
+</div>

@@ -48,21 +48,17 @@
   </mat-card-actions>
 </mat-card> -->
 
-<div class="body-content">
-  <div class="content">
-    <div class="item-content"> <span class="material-symbols-outlined">
-      egg_alt
-      </span>Desayunos </div>
-    <div class="item-content"> <span class="material-symbols-outlined">
-      restaurant
-      </span>Almuerzos  </div>
-    <div class="item-content"> <span class="material-symbols-outlined">
-      bakery_dining
-      </span>Panaderia </div>
-    <div class="item-content"> <span class="material-symbols-outlined">
-      water_loss
-      </span>Bebidas </div>
+<!-- <div class="body-content">
+
+  <div class="wrap-toggle" #wtf>
+    <input type="checkbox" id="toggle" class="change-idioma" #toggle (change)="changeIdioma()">
+    <label for="toggle" class="switch"></label>
   </div>
-</div>
+  <div class="content">
+    <div *ngFor="let menu of menus" class="item-content">
+      <span class="material-symbols-outlined">{{ menu.icon }}</span> {{ menu.name }}
+    </div>
+  </div>
+</div> -->
 
-
+<router-outlet></router-outlet>
