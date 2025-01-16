@@ -1,0 +1,15 @@
+.categorias {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  
+    .categoria-item {
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }

@@ -1,0 +1,41 @@
+/* Botón de idioma */
+.wrap-toggle {
+    position: relative;
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        background-color: gray;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: background-color 0.4s ease;
+      }
+      
+      .switch.toggled {
+        background-color: #007bff;
+      }
+      
+      .switch .flag {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        background-size: cover;
+        border-radius: 50%;
+        transition: transform 0.4s ease, background-image 0.4s ease;
+      }
+      
+      .switch.toggled .flag {
+        transform: translateX(40px);
+        background-image: url('https://www.shutterstock.com/image-vector/simple-vector-button-flag-colombia-600nw-436000261.jpg');
+      }
+      
+      .switch .flag {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/197/197484.png');
+      }
+  }

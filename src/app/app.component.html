@@ -1,64 +1,17 @@
-<!-- <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>ng bakery</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button">
-    <mat-icon>shopping_cart</mat-icon>
-  </button>
-</mat-toolbar>
-
-<h1 class="title">Nuestros productos</h1>
-
-<mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Producto Shiba</mat-card-title>
-    <mat-card-subtitle>Precio: $100</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions>
-    <button mat-button>Añadir al carrito</button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Producto Shiba</mat-card-title>
-    <mat-card-title>Descripcion producto</mat-card-title>
-    <mat-card-subtitle>Precio: $100</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions>
-    <button mat-button>Añadir al carrito</button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Producto Shiba</mat-card-title>
-    <mat-card-subtitle>Precio: $100</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions>
-    <button mat-button>Añadir al carrito</button>
-  </mat-card-actions>
-</mat-card> -->
-
-<!-- <div class="body-content">
-
-  <div class="wrap-toggle" #wtf>
-    <input type="checkbox" id="toggle" class="change-idioma" #toggle (change)="changeIdioma()">
-    <label for="toggle" class="switch"></label>
-  </div>
-  <div class="content">
-    <div *ngFor="let menu of menus" class="item-content">
-      <span class="material-symbols-outlined">{{ menu.icon }}</span> {{ menu.name }}
+<!-- <header class="navbar">
+  <div class="navbar-left">
+    <div class="wrap-toggle">
+      <button class="switch" (click)="changeIdioma()" [class.toggled]="currentLanguage === 'en'">
+        <span class="flag"></span>
+      </button>
     </div>
+    <img src="assets/logo.png" alt="Logo de la panadería" class="logo" />
   </div>
-</div> -->
+
+  <nav class="navbar-categories">
+    <ul>
+    </ul>
+  </nav>
+</header> -->
 
 <router-outlet></router-outlet>

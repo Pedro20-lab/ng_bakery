@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component,ElementRef,ViewChild  } from '@angular/core';
+import { ChangeDetectionStrategy, Component,ElementRef,OnInit,ViewChild  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -11,46 +11,35 @@ import { Menu } from './models/menu.model';
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [NgFor,RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule],
+  imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
-  title = 'ng-bakery';
-  @ViewChild('toggle') toggleRef!: ElementRef<HTMLInputElement>;
-  @ViewChild('wtf') wtfRef!: ElementRef<HTMLDivElement>;
+export class AppComponent implements OnInit {
   menus: Menu[] = [];
+  currentLanguage: string = 'es'; // Idioma inicial
 
   constructor(private menuService: MenuService) {}
+
   ngOnInit(): void {
-    // Cargar datos desde el archivo JSON
-    this.menuService.getMenuEs().subscribe({
+    this.loadMenu();
+  }
+
+  changeIdioma(): void {
+    this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    this.loadMenu();
+  }
+
+  private loadMenu(): void {
+    const menuServiceMethod =
+      this.currentLanguage === 'es'
+        ? this.menuService.getMenuEs()
+        : this.menuService.getMenuEn();
+
+    menuServiceMethod.subscribe({
       next: (data) => (this.menus = data),
       error: (err) => console.error('Error al cargar el menú:', err),
     });
-  }
-  // items = [
-  //   { name: 'Desayunos', icon: 'egg_alt' },
-  //   { name: 'Almuerzos', icon: 'restaurant' },
-  //   { name: 'Panadería', icon: 'bakery_dining' },
-  //   { name: 'Bebidas', icon: 'water_loss' }
-  // ];
-
-  changeIdioma(): void {
-    const isChecked = this.toggleRef.nativeElement.checked;
-    const el = this.wtfRef.nativeElement;
-
-    if (isChecked) {
-      this.menuService.getMenuEn().subscribe({
-        next: (data) => (this.menus = data),
-        error: (err) => console.error('Error al cargar el menú:', err),
-      });
-    } else {
-      this.menuService.getMenuEs().subscribe({
-        next: (data) => (this.menus = data),
-        error: (err) => console.error('Error al cargar el menú:', err),
-      });
-    }
   }
 }
